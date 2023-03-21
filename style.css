@@ -1,0 +1,211 @@
+/* -------------------
+    Autor: Samuel Reche Beltrán 
+    Guía de estilos
+------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Ubuntu&display=swap');
+
+:root {
+    --bg-main: #fff;
+    --main: #111;
+    --cont: #f00;
+    --bg-medium: #ddd;
+
+    --title: 'Playfair Display';
+    --text: 'Ubuntu';
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--title);
+}
+
+a,
+p,
+button {
+    font-family: var(--text);
+    text-decoration: none;
+}
+
+a{
+    color: var(--main);
+    font-weight: bold;
+}
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* ---- Navegación ---- */
+nav {
+    margin: 1rem 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--main);
+
+    font-size: 1.1rem;
+    padding: 2rem 1rem;
+    margin: 1rem;
+    border-bottom: 2px solid var(--bg-main);
+}
+
+nav a:hover {
+    transition: 300ms;
+    border-bottom: 2px solid var(--main);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.logo p {
+    font-family: var(--title);
+}
+
+.rojo {
+    color: var(--cont);
+}
+
+
+/* 
+Dibujo pizzas
+*/
+.pizzas {
+    padding: 1rem 2rem;
+    width: 20%;
+    background-color: var(--bg-medium);
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 5px 10px 10px var(--main);
+    font-family: var(--title);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+/* -----------------------  
+    PIZZA VEGETAL 🌿 
+----------------------- */
+h1 {
+    text-align-last: center;
+    font-size: 2.5rem;
+    border-bottom: 1px solid #000;
+    padding: 1rem;
+    margin: 2rem 20%;
+}
+
+.p_vegetal {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+
+img {
+    width: 50%;
+    height: max-content;
+    margin: 2rem;
+}
+
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+form * {
+    font-size: 1.1rem;
+}
+
+.precio {
+    margin: 0;
+    font-size: 3rem;
+}
+
+select {
+    font-size: 1.3rem;
+    background-color: var(--bg-medium);
+    border-radius: 12px;
+    padding: 0.2rem;
+}
+
+button {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px #000;
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 2px 2px 2px #000;
+}
+
+
+
+
+
+/*-----------------------
+        Footer 
+-----------------------*/
+
+footer {
+    margin: 2rem 10%;
+    padding: 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+footer div:nth-child(2) {
+    text-align: right;
+}
+
+
+/* Vista movil */
+@media screen and (max-width:800px) {
+    nav {
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .pizzas {
+        display: none;
+    }
+
+    h1 {
+        margin: 2rem 0;
+    }
+
+    img {
+        width: 100%;
+    }
+
+
+    .p_vegetal {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        margin: 0 1rem;
+    }
+
+    footer {
+        margin: 0;
+        padding: 1rem;
+        justify-content: space-between;
+    }
+}
